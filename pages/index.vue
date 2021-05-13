@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-layout row wrap justify-center align-center>
-      <v-flex md6>
+      <v-flex md6 >
         <v-card
           class="debit-card"
           :class="{

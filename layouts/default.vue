@@ -6,7 +6,7 @@
       </v-container>
     </v-main>
     <v-footer
-      :absolute="!fixed"
+      :absolute="!fixed" class="text-center" color="#f5f5f5"
       app
     >
       <span>&copy; {{ new Date().getFullYear() }} Patricia Test - Alabi Adewumi</span>
