@@ -2,7 +2,7 @@
   <v-container>
     <v-layout row wrap justify-center align-center>
       <v-flex md6>
-        <v-card class="debit-card pa-9">
+        <v-card class="debit-card" :class="{'pa-9':$vuetify.breakpoint.smAndUp, 'pa-6':$vuetify.breakpoint.xsOnly}">
           <v-row>
             <v-col>
               <img src="../static/assets/logo.svg" alt="" />
@@ -15,7 +15,7 @@
               </v-btn>
             </v-col>
           </v-row>
-          <v-row class="mt-16">
+          <v-row :class="{'mt-16' :$vuetify.breakpoint.smAndUp, 'mt-9':$vuetify.breakpoint.xsOnly}">
             <v-col>
               <p class="card-pan">{{ visible ? '9273' : '••••' }}</p>
             </v-col>
@@ -29,8 +29,8 @@
               <p class="card-pan">9784</p>
             </v-col>
           </v-row>
-          <v-row class="mt-16">
-            <v-col cols="7">
+          <v-row :class="{'mt-16' :$vuetify.breakpoint.smAndUp, 'mt-7':$vuetify.breakpoint.xsOnly}">
+            <v-col md="7" cols="6">
               <p class="card-holder">
                 {{ visible ? 'ALABI ADEWUMI D.' : 'Cardholder Name' }}
               </p>
@@ -105,5 +105,16 @@ p.date {
   line-height: 27px;
 
   color: #d3dce6;
+}
+@media only screen and (max-width: 600px){
+  .debit-card{
+    height: 220px;
+  }
+  p.card-pan{
+    font-size: 18px;
+  }
+  p.card-holder, p.date{
+    font-size: 12px;
+  }
 }
 </style>
